@@ -10,14 +10,18 @@
 	git checkout -b main : main이라는 이름의 브렌치를 생성하고
 							해당 브렌치로 이동
 	git branch -M main : 기본브랜치를 main 브랜치로 지정
-<<<<<<< HEAD
-	git status : 상태확인
-	4. 파일을 생성하고 add, commit 하기 
-	git add <파일명> : 파일을 staging area 추가
-	git commit -m 'massage' : commit을 하고 commit에 대한 메시지를 남긴다.
+
+4. 파일을 생성하고 add, commit 하기
+	git add<파일명> : 파일을 staing area 추가
+	git commit : commit에 대한 메시지를 남기기 위한 vi 에디터가 실행된다.
+					i : 입력모드 , esc : 입력모드 빠져나오기 , wq : 저장 종료
+	git commit -m 'message' : commit을 하고 커밋에 대한 간단한 메시지를 남긴다.
 	commit 내역은 git log 명령어를 통해 확인 가능
 5. 파일을 특정 commit 지점으로 되돌리기
-	git reset --soft <되돌릴 commit> : 
-=======
-	git status : 상태확인
->>>>>>> parent of dc775f2 (w)
+	git reset --soft<되돌릴 commit> :commit 내역을 되돌리고 commit 만 취소 (Staging area에 파일이 남아있다)
+	--mixed : 내역 되돌리고 staging 까지 취소
+	--hard : 내역 되돌리고 파일 롤백
+	rever : 파일을 rollback하고 revert 내역을 남긴다.
+	
+	6. 파일을 원격 repository(github)로 올리기
+		git remote add origin <github repository 주소>

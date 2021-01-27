@@ -25,3 +25,8 @@
 	
 	6. 파일을 원격 repository(github)로 올리기
 		git remote add origin <github repository 주소>
+		git pull --allow-unrelated-histories origin main
+			원격 저장소의 ignore 파일과 readme 파일을 당겨온다.
+				--allow-unrelated-histories  : 공통 조상을 공유하지 않는 기록 병합을 허용
+		git push -u origin main
+				-u : push 할 기본 원격 저장소와 브랜치를 기억, 앞으로 작성하지 않아도됨
